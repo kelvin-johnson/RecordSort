@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RecordSort.iml" filepath="$PROJECT_DIR$/RecordSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rs/rs.iml" filepath="$PROJECT_DIR$/rs/rs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rslib/rslib.iml" filepath="$PROJECT_DIR$/rslib/rslib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rsweb/rsweb.iml" filepath="$PROJECT_DIR$/rsweb/rsweb.iml" />
+    </modules>
+  </component>
+</project>
