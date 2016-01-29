@@ -6,89 +6,97 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import com.example.gen.DelimitedFileParser;
 import com.example.gen.DelimitedFileParserBaseListener;
 
+import java.util.LinkedList;
+import java.util.List;
+
 
 /**
  * Created by kelvin.johnson on 1/28/2016.
  */
 public class RowBuilderListener extends DelimitedFileParserBaseListener
 {
-    @Override
-    public void enterFile(DelimitedFileParser.FileContext ctx) {
-        super.enterFile(ctx);
-    }
+    List<Row> rows = new LinkedList<Row>();
+    List<Row> getRows() { return rows; }
 
-    @Override
-    public void exitFile(DelimitedFileParser.FileContext ctx) {
-        super.exitFile(ctx);
-    }
-
-    @Override
-    public void enterRow(DelimitedFileParser.RowContext ctx) {
-        super.enterRow(ctx);
-    }
-
-    @Override
-    public void exitRow(DelimitedFileParser.RowContext ctx) {
-        super.exitRow(ctx);
-    }
+    Row row = new Row();
+    int fieldIndex = 0;
 
     @Override
     public void enterRowc(DelimitedFileParser.RowcContext ctx) {
-        super.enterRowc(ctx);
+
     }
 
     @Override
     public void exitRowc(DelimitedFileParser.RowcContext ctx) {
-        super.exitRowc(ctx);
+        rows.add(row);
     }
 
     @Override
     public void enterRowp(DelimitedFileParser.RowpContext ctx) {
-        super.enterRowp(ctx);
+
     }
 
     @Override
     public void exitRowp(DelimitedFileParser.RowpContext ctx) {
-        super.exitRowp(ctx);
+        rows.add(row);
     }
 
     @Override
     public void enterRows(DelimitedFileParser.RowsContext ctx) {
-        super.enterRows(ctx);
+
     }
 
     @Override
     public void exitRows(DelimitedFileParser.RowsContext ctx) {
-        super.exitRows(ctx);
+        rows.add(row);
     }
 
     @Override
     public void enterField(DelimitedFileParser.FieldContext ctx) {
-        super.enterField(ctx);
+
+        String field = ctx.TEXT().getText();
+
+        switch(fieldIndex)
+        {
+            case 0:
+                row.setLastName(field);
+                System.out.println("LastName: " + field);
+                break;
+
+            case 1:
+                row.setFirstName(field);
+                System.out.println("FirstName: " + field);
+                break;
+
+            case 2:
+                row.setGender(field);
+                System.out.println("Gender: " + field);
+                break;
+
+            case 3:
+                row.setFavoriteColor(field);
+                System.out.println("Favorite Color: " + field);
+                break;
+
+            case 4:
+                row.setDob(field);
+                System.out.println("Date of Birth: " + field);
+                break;
+
+            default:
+                //uh oh
+        }
+        fieldIndex++;
     }
 
     @Override
     public void exitField(DelimitedFileParser.FieldContext ctx) {
-        super.exitField(ctx);
-    }
 
-    @Override
-    public void enterEveryRule(ParserRuleContext ctx) {
-        super.enterEveryRule(ctx);
-    }
-
-    @Override
-    public void exitEveryRule(ParserRuleContext ctx) {
-        super.exitEveryRule(ctx);
     }
 
     @Override
     public void visitTerminal(TerminalNode node) {
-        super.visitTerminal(node);
+
     }
 
-    @Override
-    public void visitErrorNode(ErrorNode node) {
-        super.visitErrorNode(node);
-    }
 }

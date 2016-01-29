@@ -4,6 +4,7 @@ allprojects {
 
     apply plugin: 'groovy'
     apply plugin: 'java'
+    apply plugin: 'idea'
 
     //sourceCompatibility = 1.5
 
