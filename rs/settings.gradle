@@ -1,0 +1,2 @@
+include ':rslib'
+project(':rslib').projectDir = new File(settingsDir, '../rslib')

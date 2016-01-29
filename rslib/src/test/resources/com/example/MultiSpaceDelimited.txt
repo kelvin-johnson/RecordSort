@@ -1,0 +1,12 @@
+Buffet   Jimmy   M       Brown   12-27-1970
+Bush     George  M       Red     04-23-1971
+Cartman  Eric    M       Green   05-03-1971
+Crockett Davey   M       Yellow  07-17-1972
+Doe      Jane    F       Orange  08-26-1972
+Gates    Bill    M       Blue    05-07-1973
+Jefferso George  M       Grey    12-06-1973
+Kong     King    M       Red     03-07-1975
+Munster  Herman  M       Black   10-06-1975
+Rockne   Knute   M       Red     02-17-1978
+Simpson  Homer   M       Yellow  01-20-1979
+Smith    Bob     M       Blue    05-18-1980
